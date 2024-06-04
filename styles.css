@@ -1,0 +1,122 @@
+:root {
+    --light-grey: hsl(0, 0%, 98%);
+    --graysh-blue: hsl(229, 6%, 66%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --blue: hsl(212, 86%, 64%);
+    --orange: hsl(34, 97%, 64%);
+    --cyan: hsl(180, 62%, 55%);
+    --red: hsl(0, 78%, 62%);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--light-grey);
+    font-family: "Poppins";
+    color: var(--very-dark-blue);
+}
+
+div {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    box-shadow: 0px 5px 5px black;
+}
+
+div > p {
+    margin-block-start: -1em;
+}
+
+div > h2 {
+    margin-block-start: 0;
+}
+
+img {
+    width: 3em;
+    align-self: end;
+    margin-block-start: 1em;
+
+}
+
+h2 {
+    font-weight: bold;
+}
+
+.supervisor {
+    border-block-start: 4px solid var(--cyan);
+}
+
+.team-builder {
+    border-block-start: 4px solid var(--red);
+}
+
+.karma {
+    border-block-start: 4px solid var(--orange);
+}
+
+.calculator {
+    border-block-start: 4px solid var(--blue);
+}
+
+main {
+    max-width: 45ch;
+}
+
+main > h2 {
+    font-weight: unset;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+main > p{
+    max-width: 33ch;
+    margin: auto;
+}
+
+.grid-container {
+    background-color: var(--light-grey);
+    box-shadow: unset;
+}
+
+@media (min-width: 66em) {
+    main {
+        max-width: unset;
+    }
+
+    body {
+        padding: 2rem;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .team-builder, .karma {
+        grid-column: 2 / 3;
+    }
+
+    .team-builder {
+        grid-row: 1 / 3;
+    }
+
+    .karma {
+        grid-row: 3 / 5;
+    }
+
+    .supervisor, .calculator {
+        grid-row: 2 / 4;
+    }
+
+}
